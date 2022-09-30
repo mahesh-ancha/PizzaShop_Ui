@@ -1,1 +1,26 @@
-<p>orders works!</p>
+<div class="container" my-5>
+    <h1 class="mb-3">Order Now!!</h1>
+    <div class="row">
+        <div class="col-6">
+            <form #form="ngForm" (ngSubmit)="updateorders()">
+                <div class="mb-3">
+                  <label  class="form-label">Pizza Name</label>
+                  <input type="text" class="form-control" id="name" 
+                  name="name" [(ngModel)]="addOrderRequest.pizzaname">
+                </div>
+                <div class="mb-3">
+                    <label  class="form-label">Pizza Category</label>
+                    <input type="text" class="form-control" id="category"
+                    name="category" [(ngModel)]="addOrderRequest.category">
+                  </div>
+                  <div class="mb-3">
+                    <label  class="form-label">price</label>
+                    <input type="number" class="form-control" id="price" 
+                    name="price" [(ngModel)]="addOrderRequest.price">
+                  </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+        </div>
+    </div>
+    </div>
+    

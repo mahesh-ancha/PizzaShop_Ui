@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { register } from 'src/app/models/register.model';
+import { RegisterService } from 'src/app/services/register.service';
 
 @Component({
   selector: 'app-register',
@@ -7,9 +10,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  registerrequest:register={
+    id: 0,
+    name: '',
+    email: '',
+    password: ''
+  }
+  constructor(private registerservice:RegisterService,private router:Router) { }
 
   ngOnInit(): void {
   }
+  registers()
+  {
+    this.registerservice.registers(this.registerrequest)
+    .subscribe({
+      next:(register) =>{
+        console.log(register);
+        this.router.navigate(['explore']);
+      } 
+    })
+  }
 
 }
+

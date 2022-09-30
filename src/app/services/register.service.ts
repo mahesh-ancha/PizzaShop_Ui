@@ -2,19 +2,17 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 import { environment } from 'src/environments/environment';
-import { login } from '../models/login.model';
-
+import { register } from '../models/register.model';
 @Injectable({
   providedIn: 'root'
 })
-export class LoginService {
- 
+export class RegisterService {
+
   baseApiUrl:string = environment.baseApiUrl;
 
   constructor(private http:HttpClient) { }
-  logging(loginrequest:login):Observable<login>{
+  registers(registerrequest:register):Observable<register>{
    
-    return this.http.post<login>(this.baseApiUrl+'/api /login',loginrequest);
+    return this.http.post<register>(this.baseApiUrl+'/api /register',registerrequest);
  
-  }
-}
+  }}

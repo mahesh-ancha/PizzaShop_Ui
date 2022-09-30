@@ -1,5 +1,5 @@
 <div class="container my-5">
-  <h1 class="mb-3">Login/Register</h1>
+  <h1 class="mb-3">Login</h1>
   <div class="row">
       <div class="col-6">
           <form #form="ngForm" (ngSubmit)="logging()">
@@ -7,20 +7,23 @@
                   <div class="mb-3">
                     <label for="name" class="form-label">Name </label>
                     <input type="text" class="form-control" id="name" 
-                    name="name" [(ngModel)]="addloginrequest.name">
+                    name="name" [(ngModel)]="loginrequest.name">
                   </div>
                   <div class="mb-3">
                     <label for="email" class="form-label">Email</label>
                     <input type="text" class="form-control" id="email"
-                    name="email" [(ngModel)]="addloginrequest.email">
+                    name="email" [(ngModel)]="loginrequest.email">
                   </div>
                   <div class="mb-3">
                       <label for="password" class="form-label">Password</label>
                       <input type="text" class="form-control" id="phone"
-                      name="password" [(ngModel)]="addloginrequest.password">
+                      name="password" [(ngModel)]="loginrequest.password">
                   </div>
                   
-                  <button type="submit" class="btn btn-primary" >Save</button>
+                  <button type="submit" class="btn btn-primary" >Login</button>
+                  <span>Don't have an account? 
+                    <a routerLink="/register">Register</a>
+                  </span>
                 
           </form>
       </div>

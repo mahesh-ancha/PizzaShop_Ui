@@ -1,0 +1,17 @@
+<div class="container" my-5>
+    <h1 class="mb-3">Review!</h1>
+    <div class="row">
+        <div class="col-6">
+            <form #form="ngForm" (ngSubmit)="addReview()">
+                <div class="mb-3">
+                  <label  class="form-label">Review your experience</label>
+                  <input type="text" class="form-control" id="name" 
+                  name="category" [(ngModel)]="addreviewrequest.review">
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+        </div>
+    </div>
+    </div>
+    

@@ -15,7 +15,7 @@ import { LoginComponent } from './components/login/login.component';
 import { CartComponent } from './components/cart/cart.component';
 import { CartListComponent } from './components/cart/cart-list/cart-list.component';
 import { AddCartComponent } from './components/cart/add-cart/add-cart.component';
-
+import { ReviewComponent } from './components/review/review.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +26,8 @@ import { AddCartComponent } from './components/cart/add-cart/add-cart.component'
     LoginComponent,
     CartComponent,
     CartListComponent,
-    AddCartComponent
+    AddCartComponent,
+    ReviewComponent,
   ],
   imports: [
     BrowserModule,

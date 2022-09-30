@@ -15,5 +15,5 @@ export class CartService{
 
   getCartItems(): Observable<cart[]>
   {
-    return this.http.get<cart[]>(this.baseApiUrl+'/api/cart')
+    return this.http.get<cart[]>(this.baseApiUrl+'/api /cart')
   }}
